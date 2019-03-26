@@ -1,17 +1,14 @@
-#planets, #calculate-button {
-    color: purple;
+body{
     background-color: black;
 }
 
-#user-weight {
+#input-elements {
+    border: 10px;
+    border-style: solid;
+    border-color: darkblue;
+    padding: 5px 20px;
+}
+
+#output {
     color: white;
-    background-color: black;
-}
-
-body {
-    background-color: aqua;
-}
-
-p {
-    color: purple;
 }

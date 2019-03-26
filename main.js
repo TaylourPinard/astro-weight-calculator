@@ -41,7 +41,7 @@ $(document).ready( function(){
         var userWeightTextbox = document.getElementById('user-weight'), 
             value = +(userWeightTextbox.value);
         var userWeight = userWeightTextbox.value;
-        var planetName = planets[$('#planets option:selected').index()][0]
+        var planetName = planets[$('#planets option:selected').index()][0];
         result = calculateWeight(userWeight, planetName);
         output.append(`If you were on ${planetName}, you would weigh ${result}lbs!`);
     });
