@@ -58,7 +58,5 @@ $(document).ready( function(){
         var planetName = planets[$('#planets option:selected').index()][0];
         result = calculateWeight(userWeight, planetName);
         output.append(`If you were on ${planetName}, you would weigh ${result}lbs!`);
-    });
-
-    
+    });    
 });
