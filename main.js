@@ -16,6 +16,7 @@ $(document).ready( function(){
     const planetSelect = $('#planets');
     const calculateButton = $('#calculate-button');
     const output = $('#output');
+    // const pluto = $('#is-a-planet');
 
     var result;
     var index = 0; 
@@ -28,6 +29,19 @@ $(document).ready( function(){
         index++;
     });
 
+    // pluto.addEventListener('change', function(){
+    //     if(pluto.checked == false){
+    //         var newOption = document.createElement("option");
+    //         newOption.append(["pluto", 0.06]);
+    //         planets.append(newOption);
+    //         planetSelect.append(newOption[0]);
+    //     }
+    //     if(pluto.checked == true){
+    //         planets.splice(0,1);
+    //         planetSelect.remove[0];
+    //     }
+    // });
+
     function calculateWeight(weight, planetName){
         for(i = 0; i <= planets.length; i++){
             if(planetName == planets[i][0]){
@@ -37,7 +51,7 @@ $(document).ready( function(){
     }
 
     calculateButton[0].addEventListener("click", function(){
-        output.innerHTML = "";
+        document.getElementById('output').innerHTML = "";
         var userWeightTextbox = document.getElementById('user-weight'), 
             value = +(userWeightTextbox.value);
         var userWeight = userWeightTextbox.value;
@@ -45,4 +59,6 @@ $(document).ready( function(){
         result = calculateWeight(userWeight, planetName);
         output.append(`If you were on ${planetName}, you would weigh ${result}lbs!`);
     });
+
+    
 });
