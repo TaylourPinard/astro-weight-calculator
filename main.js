@@ -28,14 +28,21 @@ $(document).ready( function(){
         index++;
     });
 
+    function calculateWeight(weight, planetName){
+        for(i = 0; i <= planets.length; i++){
+            if(planetName == planets[i][0]){
+                return weight * planets[i][1];
+            }
+        }
+    }
+
     calculateButton[0].addEventListener("click", function(){
         document.getElementById('output').innerHTML = "";
         var userWeightTextbox = document.getElementById('user-weight'), 
             value = +(userWeightTextbox.value);
         var userWeight = userWeightTextbox.value;
-        var selectedPlanetGravity = planets[$('#planets option:selected').index()][1];
-        var selectedPlanetName = planets[$('#planets option:selected').index()][0]
-        result = selectedPlanetGravity * userWeight;
-        output.append(`If you were on ${selectedPlanetName}, you would weigh ${result}lbs!`);
+        var planetName = planets[$('#planets option:selected').index()][0]
+        result = calculateWeight(userWeight, planetName);
+        output.append(`If you were on ${planetName}, you would weigh ${result}lbs!`);
     });
 });
