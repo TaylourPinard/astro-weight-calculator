@@ -16,7 +16,6 @@ $(document).ready( function(){
     const planetSelect = $('#planets');
     const calculateButton = $('#calculate-button');
     const output = $('#output');
-    // const pluto = $('#is-a-planet');
 
     var result;
     var index = 0; 
@@ -28,19 +27,6 @@ $(document).ready( function(){
         planetSelect.append(newOption);
         index++;
     });
-
-    // pluto.addEventListener('change', function(){
-    //     if(pluto.checked == false){
-    //         var newOption = document.createElement("option");
-    //         newOption.append(["pluto", 0.06]);
-    //         planets.append(newOption);
-    //         planetSelect.append(newOption[0]);
-    //     }
-    //     if(pluto.checked == true){
-    //         planets.splice(0,1);
-    //         planetSelect.remove[0];
-    //     }
-    // });
 
     function calculateWeight(weight, planetName){
         for(i = 0; i <= planets.length; i++){
